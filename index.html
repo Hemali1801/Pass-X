@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <!-- Added stylesheet -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- * Poppins Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="logo navbar-brand">PassX</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="color: #EBA63F;">Password Manager</h1>
+        Welcome to our secure haven for your passwords! Explore our trusted password manager and safeguard your digital world effortlessly. Feel free to reach out if you have any questions or need assistance along the way. Happy password managing!
+        <br><br><br>
+        <h2 style="color: #EBA63F;">Your Passwords <span id="alert">Copied</span></h2>
+        <table>
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <br><br><br>
+        <h2 style="color: #EBA63F;">Add a password</h2>
+        <form action="/submit" method="post">
+
+            <!-- Text input for website -->
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website" required>
+            <br><br>
+
+            <!-- Text input for username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+        
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+        
+            <!-- Submit button -->
+            <button type="submit" class="btn">submit</button>
+        </form>
+    </div>    
+    <script src="script.js">
+        // Accessing form input elements
+const websiteInput = document.getElementById("website");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+
+// Event listener for form submission
+document.querySelector("button[type='submit']").addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Retrieve form input values
+    const website = websiteInput.value;
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    // Rest of your code for saving passwords to localStorage and updating UI
+    // Make sure to define showPasswords() and other related functions before this point
+    // ...
+
+    // Clear form inputs after submission
+    websiteInput.value = "";
+    usernameInput.value = "";
+    passwordInput.value = "";
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

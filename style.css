@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #1D1D2C !important;
+    color: #E6E2DD !important;
+}
+
+nav {
+    /* background-color: #150734; */
+    color: #E6E2DD;
+    padding: 12px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #EBA63F !important;
+    font-weight: 800;
+    font-size: 25px;
+    margin: 0 23px;
+}
+
+ul {
+    display: flex;
+    margin: 0 23px;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 13px;
+    color: #EBA63F;
+}
+
+ul li:hover {
+    color: aliceblue;
+}
+
+table, td, tr {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px 13px;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 23px auto;
+}
+
+h1, h2, h3 {
+    margin: 23px 0;
+}
+
+button {
+    padding: 8px 17px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.btnsm {
+    padding: 8px 17px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    border: 2px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+    position: relative;
+    bottom: 7px;
+}
+
+#alert {
+    display: none;
+}
+
+div form input {
+    background-color: gray;
+    opacity: 0.2;
+}
+
+.btn {
+    background-color: #EBA63F !important;
+}
